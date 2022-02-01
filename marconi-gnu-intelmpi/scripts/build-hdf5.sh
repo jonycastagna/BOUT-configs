@@ -17,4 +17,4 @@ tar xzf HDF5-1.12.1-Linux.tar.gz
 
 # Create a symbolic link to the built HDF5 directory, because HDF5 creates it at an insanely complicated path
 cd $DEPS_ROOT
-ln -s CMake-hdf5-1.12.1/HDF5-1.12.1-Linux/HDF_Group/HDF5/1.12.1/ hdf5-build
+ln -s --no-target-directory CMake-hdf5-1.12.1/HDF5-1.12.1-Linux/HDF_Group/HDF5/1.12.1/ hdf5-build
