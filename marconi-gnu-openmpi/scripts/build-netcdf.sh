@@ -14,9 +14,6 @@ tar xzf v4.8.1.tar.gz
 mkdir netcdf-build
 
 cd netcdf-c-4.8.1
-#CPPFLAGS="-I$DEPS_ROOT/hdf5-build/include" LDFLAGS="-L$DEPS_ROOT/hdf5-build/lib/" ./configure --prefix=$DEPS_ROOT/netcdf-build
-#make -j 16
-#make install
 
 cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$DEPS_ROOT/netcdf-build/ -DCMAKE_FIND_ROOT_PATH=$DEPS_ROOT/hdf5-build/
 cmake --build build -j 16
